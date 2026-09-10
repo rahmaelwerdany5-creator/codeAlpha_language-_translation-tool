@@ -2,9 +2,7 @@
 !pip install translators gTTS
 from gtts import gTTS
 from IPython.display import Audio, display
-import translators as ts
-
-# 1. قائمة اللغات المدعومة
+import translators as t
 languages = {
     '1': ('English', 'en'),
     '2': ('Arabic', 'ar'),
@@ -37,8 +35,7 @@ def run_translation_tool():
   print('\n⏳ Translating, please wait...')
 
   try:
-    # إجراء الترجمة
-    translated_text = ts.translate_text(
+    
         query_text=text_to_translate,
         translator='bing',
         from_language='auto',
